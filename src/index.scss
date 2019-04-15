@@ -1,3 +1,8 @@
 @import './scss/fix';
 @import './scss/variables';
 @import './scss/mixings';
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
