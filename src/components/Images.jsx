@@ -1,15 +1,14 @@
 import React from 'react'
 
+import ImageCard from './ImageCard'
+
+import './Images.css'
+
 const Images = props => {
-  console.log(props.images)
-  const images = props.images.map(({ id, description, urls }) => {
-    return (
-      <div key={id}>
-        <img src={urls.regular} alt={description} />
-      </div>
-    )
+  const images = props.images.map(image => {
+    return <ImageCard key={image.id} image={image} />
   })
-  return <div>{images}</div>
+  return <div className="images">{images}</div>
 }
 
 export default Images
